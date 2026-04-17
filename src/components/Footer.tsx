@@ -1,4 +1,14 @@
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Twitter, UtensilsCrossed } from 'lucide-react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+
+const customIcon = new L.Icon({
+  iconUrl: 'https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png',
+  iconSize: [60, 60],
+  iconAnchor: [30, 30],
+  popupAnchor: [0, -30]
+});
 
 export default function Footer() {
   return (
@@ -43,7 +53,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm font-medium">
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-accent shrink-0 mt-1" />
-                <span>H#61, Surti Muslim Society, Model Colony, Malir District, KHI 75100</span>
+                <span>Nawab St, Model Colony Surti Housing Society, Karachi, 75080, Pakistan</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={18} className="text-accent shrink-0" />
@@ -75,23 +85,37 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Location Map */}
           <div>
-            <h4 className="text-lg font-serif font-bold text-brand-50 mb-6 uppercase tracking-widest">Newsletter</h4>
-            <p className="text-sm mb-4 font-medium">Subscribe to receive updates, access to exclusive deals, and more.</p>
-            <form className="flex flex-col space-y-3" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Enter your email address" 
-                className="bg-brand-950 border border-brand-50/20 px-6 py-3.5 text-sm focus:outline-none focus:border-accent text-brand-50 placeholder-brand-50/50 rounded-full transition-colors"
-              />
-              <button 
-                type="submit" 
-                className="bg-accent text-white font-bold uppercase tracking-widest text-sm py-3.5 rounded-full hover:bg-accent/90 transition-all shadow-lg shadow-accent/20"
+            <h4 className="text-lg font-serif font-bold text-brand-50 mb-6 uppercase tracking-widest">Map</h4>
+            <div className="w-full h-48 bg-brand-950 rounded-xl overflow-hidden border border-brand-50/20" style={{ isolation: 'isolate' }}>
+              <MapContainer 
+                center={[24.910569, 67.199396]} 
+                zoom={16} 
+                scrollWheelZoom={false} 
+                style={{ height: '100%', width: '100%', zIndex: 10 }}
               >
-                Subscribe
-              </button>
-            </form>
+                <TileLayer
+                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={[24.910569, 67.199396]} icon={customIcon}>
+                  <Popup>
+                    <div className="text-center font-serif text-brand-900 font-bold p-1">
+                      Baraka Kitchen <br/>
+                      <a 
+                        href="https://maps.google.com/?q=24.910569,67.199396" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-accent text-xs mt-1 inline-block uppercase tracking-widest"
+                      >
+                        Get Directions
+                      </a>
+                    </div>
+                  </Popup>
+                </Marker>
+              </MapContainer>
+            </div>
           </div>
 
         </div>
