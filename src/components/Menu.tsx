@@ -28,7 +28,7 @@ const menuCategories = [
     ]
   },
   {
-    title: "Baraka Biryani",
+    title: "Baraka Kitchen",
     description: "To complement your main course.",
     items: [
       { name: "Beef Biryani 500-gm", price: "Rs.540", desc: "Aromatic basmati rice cooked with rich spices. Juicy beef full of flavor in every bite!", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-5.png?q=80&w=200&auto=format&fit=crop" },
@@ -167,7 +167,7 @@ export default function Menu() {
       // Add Title
       doc.setFontSize(24);
       doc.setTextColor(23, 23, 23); // brand-900
-      doc.text("Baraka Biryani", 105, 62, { align: "center" });
+      doc.text("Baraka Kitchen", 105, 62, { align: "center" });
       
       doc.setFontSize(12);
       doc.setTextColor(128, 0, 0); // elegant maroon
@@ -176,8 +176,8 @@ export default function Menu() {
       // Add Contact Details
       doc.setFontSize(10);
       doc.setTextColor(100, 100, 100);
-      doc.text("H#61, Surti Muslim Society, Model Colony, Malir District, KHI 75100", 105, 74, { align: "center" });
-      doc.text("Phone: +92 332 2011406  |  Email: reservations@barakabiryani.com", 105, 79, { align: "center" });
+      doc.text("Nawab St, Model Colony Surti Housing Society, Karachi, 75080, Pakistan", 105, 74, { align: "center" });
+      doc.text("Phone: +92 332 8799437  |  Email: order@barakakitchen.com", 105, 79, { align: "center" });
 
       let startY = 93;
 
@@ -296,7 +296,7 @@ export default function Menu() {
                       <p className="text-brand-800/70 text-sm leading-relaxed">{item.desc}</p>
                       <div className="flex items-center gap-2 mt-3 overflow-x-auto pb-1" onClick={(e) => e.stopPropagation()}>
                         <a 
-                          href="https://wa.me/923328799437" 
+                          href={`https://wa.me/923328799437?text=${encodeURIComponent(`Hello Baraka Kitchen! I would like to order: ${item.name} (${item.price}).`)}`}
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="inline-flex items-center justify-center px-3 py-1.5 bg-[#25D366] text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full hover:bg-[#128C7E] transition-colors shadow-md shadow-[#25D366]/20 whitespace-nowrap"
@@ -389,7 +389,7 @@ export default function Menu() {
                 <p className="text-white/80 text-lg font-medium mb-6">{selectedItem.desc}</p>
                 <div className="flex flex-row items-center justify-center gap-2 sm:gap-4 w-full px-2">
                   <a 
-                    href="https://wa.me/923328799437" 
+                    href={`https://wa.me/923328799437?text=${encodeURIComponent(`Hello Baraka Kitchen! I would like to order: ${selectedItem.name} (${selectedItem.price}).`)}`}
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-4 sm:px-8 py-3 bg-[#25D366] text-white text-xs sm:text-sm font-bold uppercase tracking-widest rounded-full hover:bg-[#128C7E] transition-all hover:scale-105 shadow-lg shadow-[#25D366]/20 whitespace-nowrap"

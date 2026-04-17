@@ -121,7 +121,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-20 pt-8 border-t border-brand-50/10 flex flex-col md:flex-row justify-between items-center text-xs text-brand-50/50">
-          <p>&copy; {new Date().getFullYear()} Baraka Biryani. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Baraka Kitchen. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-brand-50 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-brand-50 transition-colors">Terms of Service</a>

@@ -7,7 +7,10 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Story from './components/Story';
 import Menu from './components/Menu';
+import Catering from './components/Catering';
 import Gallery from './components/Gallery';
+import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -17,7 +20,10 @@ export default function App() {
       <Hero />
       <Story />
       <Menu />
+      <Catering />
       <Gallery />
+      <Testimonials />
+      <FAQ />
       <Footer />
     </main>
   );

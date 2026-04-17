@@ -45,7 +45,7 @@ export default function Story() {
             
             <div className="space-y-6 text-brand-800/80 font-medium leading-relaxed text-lg">
               <p>
-                At Baraka Biryani, we believe the best food comes straight from the heart of a home kitchen. As a passionate homechef, I pour my love for authentic flavors into every single order, ensuring you get that comforting, homemade taste.
+                At Baraka Kitchen, we believe the best food comes straight from the heart of a home kitchen. As a passionate homechef, I pour my love for authentic flavors into every single order, ensuring you get that comforting, homemade taste.
               </p>
               <p>
                 Every pot of our signature biryani is slow-cooked in small batches using the traditional 'dum' style. We carefully layer premium basmati rice, tender marinated meats, and our secret blend of aromatic spices to steam together in their own rich juices.
