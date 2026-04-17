@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { UtensilsCrossed, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { UtensilsCrossed, X, ChevronLeft, ChevronRight, Phone } from 'lucide-react';
 
 const menuCategories = [
   {
@@ -280,15 +280,23 @@ export default function Menu() {
                         <span className="text-lg font-bold text-accent whitespace-nowrap">{item.price}</span>
                       </div>
                       <p className="text-brand-800/70 text-sm leading-relaxed">{item.desc}</p>
-                      <a 
-                        href="https://wa.me/923328799437" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="mt-3 inline-flex items-center justify-center px-4 py-1.5 bg-[#25D366] text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-[#128C7E] transition-colors self-start shadow-md shadow-[#25D366]/20"
-                      >
-                        Order on WhatsApp
-                      </a>
+                      <div className="flex flex-wrap gap-2 mt-3" onClick={(e) => e.stopPropagation()}>
+                        <a 
+                          href="https://wa.me/923328799437" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center px-4 py-1.5 bg-[#25D366] text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-[#128C7E] transition-colors shadow-md shadow-[#25D366]/20"
+                        >
+                          Order on WhatsApp
+                        </a>
+                        <a 
+                          href="tel:+923328799437" 
+                          className="inline-flex items-center justify-center px-4 py-1.5 bg-brand-900 border border-brand-800 text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-brand-800 transition-colors shadow-md"
+                        >
+                          <Phone size={14} className="mr-1.5" />
+                          Call
+                        </a>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -364,14 +372,23 @@ export default function Menu() {
                   {selectedItem.name} <span className="text-accent ml-3">{selectedItem.price}</span>
                 </h3>
                 <p className="text-white/80 text-lg font-medium mb-6">{selectedItem.desc}</p>
-                <a 
-                  href="https://wa.me/923328799437" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-3 bg-[#25D366] text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-[#128C7E] transition-all hover:scale-105 shadow-lg shadow-[#25D366]/20"
-                >
-                  Order on WhatsApp
-                </a>
+                <div className="flex flex-wrap items-center justify-center gap-4 w-full">
+                  <a 
+                    href="https://wa.me/923328799437" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-8 py-3 bg-[#25D366] text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-[#128C7E] transition-all hover:scale-105 shadow-lg shadow-[#25D366]/20"
+                  >
+                    Order on WhatsApp
+                  </a>
+                  <a 
+                    href="tel:+923328799437" 
+                    className="inline-flex items-center justify-center px-8 py-3 bg-white text-brand-950 text-sm font-bold uppercase tracking-widest rounded-full hover:bg-white/90 transition-all hover:scale-105 shadow-lg"
+                  >
+                    <Phone size={18} className="mr-2" />
+                    Call
+                  </a>
+                </div>
               </div>
             </motion.div>
           </motion.div>
