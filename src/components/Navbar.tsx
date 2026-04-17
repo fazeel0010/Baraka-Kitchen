@@ -28,9 +28,9 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-        <a href="#" className="flex items-center text-2xl md:text-3xl font-serif font-bold text-brand-50 tracking-tight group">
-          <img src="https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png" alt="Braka Biryani Logo" className="h-16 md:h-20 w-auto object-contain" />
-          <span className="-ml-2 md:-ml-4 text-white drop-shadow-sm">Baraka Kitchen</span>
+        <a href="#" className="flex items-center text-xl sm:text-2xl md:text-3xl font-serif font-bold text-brand-50 tracking-tight group shrink-0">
+          <img src="https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png" alt="Baraka Kitchen Logo" className="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0" />
+          <span className="-ml-1 md:-ml-4 text-white drop-shadow-sm truncate">Baraka Kitchen</span>
         </a>
 
 

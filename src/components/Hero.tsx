@@ -15,36 +15,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-brand-950/20 via-transparent to-brand-950/80" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-16">
-        <motion.span 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="block text-accent uppercase tracking-[0.3em] text-sm md:text-base mb-6 font-bold"
-        >
-          {/* Authentic Heritage */}
-        </motion.span>
-        
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-8 leading-[1.1] tracking-tight"
-        >
-      {          /*    The Royal Taste of <br className="hidden md:block" />
-          <span className="italic text-accent">Biryani</span>*/}
-        </motion.h1>
-        
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto font-light leading-relaxed"
-        >
-       {          /*   Experience the rich, aromatic spices and slow-cooked perfection that has been passed down through generations. */}
-        </motion.p>
-      </div>
+    
       
       {/* Bottom Actions & Scroll Indicator */}
       <motion.div 

@@ -288,27 +288,27 @@ export default function Menu() {
                       )}
                     </div>
                     <div className="flex-grow flex flex-col group-hover/item:opacity-80 transition-opacity pt-1">
-                      <div className="flex justify-between items-baseline mb-2">
-                        <h4 className="text-lg sm:text-xl font-serif text-brand-900 font-bold">{item.name}</h4>
-                        <div className="flex-grow border-b-2 border-dotted border-brand-200 mx-4 relative top-[-6px]"></div>
-                        <span className="text-lg font-bold text-accent whitespace-nowrap">{item.price}</span>
+                      <div className="flex flex-wrap sm:flex-nowrap justify-between items-baseline mb-2 gap-x-2">
+                        <h4 className="text-base sm:text-lg md:text-xl font-serif text-brand-900 font-bold max-w-full sm:max-w-[70%] break-words">{item.name}</h4>
+                        <div className="hidden sm:block flex-grow border-b-2 border-dotted border-brand-200 mx-4 relative top-[-6px] min-w-[20px]"></div>
+                        <span className="text-base sm:text-lg font-bold text-accent whitespace-nowrap shrink-0">{item.price}</span>
                       </div>
                       <p className="text-brand-800/70 text-sm leading-relaxed">{item.desc}</p>
-                      <div className="flex items-center gap-2 mt-3 overflow-x-auto pb-1" onClick={(e) => e.stopPropagation()}>
+                      <div className="flex flex-wrap items-center gap-2 mt-3" onClick={(e) => e.stopPropagation()}>
                         <a 
                           href={`https://wa.me/923328799437?text=${encodeURIComponent(`Hello Baraka Kitchen! I would like to order: ${item.name} (${item.price}).`)}`}
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center px-3 py-1.5 bg-[#25D366] text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full hover:bg-[#128C7E] transition-colors shadow-md shadow-[#25D366]/20 whitespace-nowrap"
+                          className="flex-1 min-w-[140px] inline-flex items-center justify-center px-2 py-2 sm:px-3 sm:py-1.5 bg-[#25D366] text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full hover:bg-[#128C7E] transition-colors shadow-md shadow-[#25D366]/20"
                         >
-                          <WhatsAppIcon size={14} className="mr-1.5 shrink-0" />
-                          Order on WhatsApp
+                          <WhatsAppIcon size={14} className="mr-1 sm:mr-1.5 shrink-0" />
+                          <span className="truncate">Order WhatsApp</span>
                         </a>
                         <a 
                           href="tel:+923328799437" 
-                          className="inline-flex items-center justify-center px-3 py-1.5 bg-brand-900 border border-brand-800 text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full hover:bg-brand-800 transition-colors shadow-md whitespace-nowrap shrink-0"
+                          className="flex-[0.5] min-w-[70px] inline-flex items-center justify-center px-2 py-2 sm:px-3 sm:py-1.5 bg-brand-900 border border-brand-800 text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full hover:bg-brand-800 transition-colors shadow-md shrink-0"
                         >
-                          <Phone size={14} className="mr-1.5" />
+                          <Phone size={14} className="mr-1 sm:mr-1.5 shrink-0" />
                           Call
                         </a>
                       </div>
@@ -387,22 +387,22 @@ export default function Menu() {
                   {selectedItem.name} <span className="text-accent ml-3">{selectedItem.price}</span>
                 </h3>
                 <p className="text-white/80 text-lg font-medium mb-6">{selectedItem.desc}</p>
-                <div className="flex flex-row items-center justify-center gap-2 sm:gap-4 w-full px-2">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 w-full mt-2">
                   <a 
                     href={`https://wa.me/923328799437?text=${encodeURIComponent(`Hello Baraka Kitchen! I would like to order: ${selectedItem.name} (${selectedItem.price}).`)}`}
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-4 sm:px-8 py-3 bg-[#25D366] text-white text-xs sm:text-sm font-bold uppercase tracking-widest rounded-full hover:bg-[#128C7E] transition-all hover:scale-105 shadow-lg shadow-[#25D366]/20 whitespace-nowrap"
+                    className="inline-flex items-center justify-center px-4 sm:px-8 py-3 bg-[#25D366] text-white text-xs sm:text-sm font-bold uppercase tracking-widest rounded-full hover:bg-[#128C7E] transition-all sm:hover:scale-105 shadow-lg shadow-[#25D366]/20"
                   >
-                    <WhatsAppIcon size={16} className="mr-1.5 sm:mr-2 shrink-0" />
-                    Order on WhatsApp
+                    <WhatsAppIcon size={16} className="mr-2 shrink-0" />
+                    <span>Order on WhatsApp</span>
                   </a>
                   <a 
                     href="tel:+923328799437" 
-                    className="inline-flex items-center justify-center px-4 sm:px-8 py-3 bg-white text-brand-950 text-xs sm:text-sm font-bold uppercase tracking-widest rounded-full hover:bg-white/90 transition-all hover:scale-105 shadow-lg whitespace-nowrap"
+                    className="inline-flex items-center justify-center px-4 sm:px-8 py-3 bg-white text-brand-950 text-xs sm:text-sm font-bold uppercase tracking-widest rounded-full hover:bg-white/90 transition-all sm:hover:scale-105 shadow-lg shadow-black/5"
                   >
-                    <Phone size={16} className="mr-1.5 sm:mr-2 shrink-0" />
-                    Call
+                    <Phone size={16} className="mr-2 shrink-0" />
+                    <span>Call to Order</span>
                   </a>
                 </div>
               </div>
