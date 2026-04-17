@@ -8,7 +8,7 @@ const menuCategories = [
     description: "Value-packed biryani deals served with kabab and raita",
     items: [
       { name: "Signature Deal 1", price: "Rs.670", desc: "500-gm Beef Biryani, 1 Shami Kabab with Raita.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-1.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Signature Deal 2", price: "Rs.570", desc: "500-gm Chicken Biryani, 1 Shami Kabab with Raita.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20-6.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Signature Deal 2", price: "Rs.700", desc: "500-gm Chicken Biryani, 1 Shami Kabab with Raita.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20-6.png?q=80&w=200&auto=format&fit=crop" },
       { name: "Signature Deal 3", price: "Rs.1,499", desc: "1-kg Beef Biryani 2 Shami Kabab, 2 Raita and 2 300-ml soft drink", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20with%202%20soft%20drink.png?q=80&w=200&auto=format&fit=crop" },
       { name: "Signature Deal 4", price: "Rs.1,375", desc: "1-kg Chicken Biryani 2 Shami Kabab, 2 Raita and 2 300-ml soft drink", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20with%202%20soft%20drink.png?q=80&w=200&auto=format&fit=crop" }
     ]
@@ -25,7 +25,7 @@ const menuCategories = [
     description: "To complement your main course.",
     items: [
       { name: "Beef Biryani 500-gm", price: "Rs.540", desc: "Aromatic basmati rice cooked with rich spices. Juicy beef full of flavor in every bite!", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-5.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Chicken Biryani 500-gm", price: "Rs.440", desc: "Fragrant basmati rice cooked with seasoned chicken and spices.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20-4.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Chicken Biryani 500-gm", price: "Rs.380", desc: "Fragrant basmati rice cooked with seasoned chicken and spices.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20-4.png?q=80&w=200&auto=format&fit=crop" },
       { name: "Beef Biryani 1-kg", price: "Rs.1080", desc: "Aromatic basmati rice cooked with rich spices. Juicy beef full of flavor in every bite!", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-5.png?q=80&w=200&auto=format&fit=crop" },
       { name: "Chicken Biryani 1-kg", price: "Rs.880", desc: "Fragrant basmati rice cooked with seasoned chicken and spices.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20-4.png?q=80&w=200&auto=format&fit=crop" },
     ]
@@ -42,7 +42,7 @@ const menuCategories = [
     title: "Frozen Items",
     description: "Ready-to-cook frozen items made with Baraka’s authentic taste and quality.",
     items: [
-      { name: "Frozen Beef Shami Kebab (6 Pieces)", price: "Rs.550", desc: "Hand-ground and handmade shami kebabs prepared with minced beef and traditional spices.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Frozen%20Kabab.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Frozen Beef Shami Kebab (6 Pieces)", price: "Rs.660", desc: "Hand-ground and handmade shami kebabs prepared with minced beef and traditional spices.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Frozen%20Kabab.png?q=80&w=200&auto=format&fit=crop" },
       { name: "Frozen Aloo Samosa (6 Pieces)", price: "Rs.225", desc: "Crispy samosas filled with spiced potato stuffing, ready to fry.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Frozen%20Aloo%20Samosa.png?q=80&w=200&auto=format&fit=crop" },
       { name: "Frozen Qeema Samosa (6 Pieces)", price: "Rs.275", desc: "Samosas stuffed with seasoned minced meat, easy to prepare and fry.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Frozen%20Qeema%20Samosa.png?q=80&w=200&auto=format&fit=crop" },
       { name: "Frozen Chicken Samosa (6 Pieces)", price: "Rs.255", desc: "Crispy samosas filled with chicken and traditional spices.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Frozen%20Chicken%20Samosa.png?q=80&w=200&auto=format&fit=crop" }
@@ -70,15 +70,15 @@ const menuCategories = [
     title: "Beverages",
     description: "Refreshing drinks to quench your thirst and pair perfectly with your meal.",
     items: [
-      { name: "Fizup Next 500 ml", price: "Rs.140", desc: "Chilled fizzy soft drink for a refreshing taste.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Fizzup%20500%20ml.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Cola Next 300 ml", price: "Rs.99", desc: "Classic cola flavor served chilled.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Cola%20Next.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Fizup Next 500 ml", price: "Rs.150", desc: "Chilled fizzy soft drink for a refreshing taste.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Fizzup%20500%20ml.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Cola Next 300 ml", price: "Rs.115", desc: "Classic cola flavor served chilled.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Cola%20Next.png?q=80&w=200&auto=format&fit=crop" },
       { name: "Fizup Next 300 ml", price: "Rs.99", desc: "Light and refreshing lemon-lime soft drink.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Fizzup%20up%20300%20ml.png?q=80&w=200&auto=format&fit=crop" },
       { name: "Pakola Cream Soda 300 ml", price: "Rs.99", desc: "Famous creamy soda with a unique flavor.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Pakola%20355%20ml.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Gourmet Cola", price: "Rs.140", desc: "Rich cola drink served cold for maximum refreshment.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Gourmet%20cola%20300%20ml.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "7up 345 ml", price: "Rs.125", desc: "Crisp lemon-lime soda to refresh your palate.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%207up%20300%20ml.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Gourmet Cola", price: "Rs.150", desc: "Rich cola drink served cold for maximum refreshment.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Gourmet%20cola%20300%20ml.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "7up 345 ml", price: "Rs.150", desc: "Crisp lemon-lime soda to refresh your palate.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%207up%20300%20ml.png?q=80&w=200&auto=format&fit=crop" },
       { name: "Pepsi 345 ml", price: "Rs.125", desc: "Bold and refreshing cola drink served chilled.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20pepsi%20300%20ml.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Mirinda 345 ml", price: "Rs.125", desc: "Sweet and tangy orange flavored soda.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Mirinda%20300%20ml.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Slice 355 ml", price: "Rs.140", desc: "Delicious mango juice drink, sweet and refreshing.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Slice%20juice%20355%20ml.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Mirinda 345 ml", price: "Rs.150", desc: "Sweet and tangy orange flavored soda.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Mirinda%20300%20ml.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Slice 355 ml", price: "Rs.155", desc: "Delicious mango juice drink, sweet and refreshing.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Slice%20juice%20355%20ml.png?q=80&w=200&auto=format&fit=crop" },
     ]
   },
     {
@@ -281,13 +281,13 @@ export default function Menu() {
                       </div>
                       <p className="text-brand-800/70 text-sm leading-relaxed">{item.desc}</p>
                       <a 
-                        href="https://www.foodpanda.pk/restaurant/jq2x/baraka-biryani" 
+                        href="https://wa.me/923328799437" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="mt-3 inline-flex items-center justify-center px-4 py-1.5 bg-[#D70F64] text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-[#e21b70] transition-colors self-start shadow-md shadow-[#D70F64]/20"
+                        className="mt-3 inline-flex items-center justify-center px-4 py-1.5 bg-[#25D366] text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-[#128C7E] transition-colors self-start shadow-md shadow-[#25D366]/20"
                       >
-                        Order on Foodpanda
+                        Order on WhatsApp
                       </a>
                     </div>
                   </div>
@@ -365,12 +365,12 @@ export default function Menu() {
                 </h3>
                 <p className="text-white/80 text-lg font-medium mb-6">{selectedItem.desc}</p>
                 <a 
-                  href="https://www.foodpanda.pk/restaurant/jq2x/baraka-biryani" 
+                  href="https://wa.me/923328799437" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-3 bg-[#D70F64] text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-[#e21b70] transition-all hover:scale-105 shadow-lg shadow-[#D70F64]/20"
+                  className="inline-flex items-center justify-center px-8 py-3 bg-[#25D366] text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-[#128C7E] transition-all hover:scale-105 shadow-lg shadow-[#25D366]/20"
                 >
-                  Order on Foodpanda
+                  Order on WhatsApp
                 </a>
               </div>
             </motion.div>

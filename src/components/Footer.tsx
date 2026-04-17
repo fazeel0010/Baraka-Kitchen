@@ -14,17 +14,27 @@ export default function Footer() {
             <p className="text-sm leading-relaxed mb-8">
               Authentic dum biryani and royal Pakistani cuisine, served in an elegant, rustic setting.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://www.foodpanda.pk/restaurant/jq2x/baraka-biryani" className="w-10 h-10 rounded-full border border-brand-50/20 flex items-center justify-center hover:bg-accent hover:text-brand-950 hover:border-accent transition-all">
+            <div className="flex space-x-4 mb-8">
+              <a href="#" className="w-10 h-10 rounded-full border border-brand-50/20 flex items-center justify-center hover:bg-accent hover:text-brand-950 hover:border-accent transition-all">
                 <Instagram size={18} />
               </a>
-              <a href="https://www.foodpanda.pk/restaurant/jq2x/baraka-biryani" className="w-10 h-10 rounded-full border border-brand-50/20 flex items-center justify-center hover:bg-accent hover:text-brand-950 hover:border-accent transition-all">
+              <a href="#" className="w-10 h-10 rounded-full border border-brand-50/20 flex items-center justify-center hover:bg-accent hover:text-brand-950 hover:border-accent transition-all">
                 <Facebook size={18} />
               </a>
-              <a href="https://www.foodpanda.pk/restaurant/jq2x/baraka-biryani" className="w-10 h-10 rounded-full border border-brand-50/20 flex items-center justify-center hover:bg-accent hover:text-brand-950 hover:border-accent transition-all">
+              <a href="#" className="w-10 h-10 rounded-full border border-brand-50/20 flex items-center justify-center hover:bg-accent hover:text-brand-950 hover:border-accent transition-all">
                 <Twitter size={18} />
               </a>
             </div>
+            
+            <a 
+              href="https://www.foodpanda.pk/restaurant/jq2x/baraka-biryani" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-2.5 bg-[#D70F64] text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-[#e21b70] transition-colors shadow-md shadow-[#D70F64]/20"
+            >
+              <UtensilsCrossed size={16} className="mr-2" />
+              Order on Foodpanda
+            </a>
           </div>
 
           {/* Contact */}
@@ -41,7 +51,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={18} className="text-accent shrink-0" />
-                <span>reservations@barakabiryani.com</span>
+                <span>order@barakakitchen.com</span>
               </li>
             </ul>
           </div>
