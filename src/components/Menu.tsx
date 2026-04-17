@@ -294,19 +294,19 @@ export default function Menu() {
                         <span className="text-lg font-bold text-accent whitespace-nowrap">{item.price}</span>
                       </div>
                       <p className="text-brand-800/70 text-sm leading-relaxed">{item.desc}</p>
-                      <div className="flex flex-wrap gap-2 mt-3" onClick={(e) => e.stopPropagation()}>
+                      <div className="flex items-center gap-2 mt-3 overflow-x-auto pb-1" onClick={(e) => e.stopPropagation()}>
                         <a 
                           href="https://wa.me/923328799437" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center px-4 py-1.5 bg-[#25D366] text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-[#128C7E] transition-colors shadow-md shadow-[#25D366]/20"
+                          className="inline-flex items-center justify-center px-3 py-1.5 bg-[#25D366] text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full hover:bg-[#128C7E] transition-colors shadow-md shadow-[#25D366]/20 whitespace-nowrap"
                         >
-                          <WhatsAppIcon size={14} className="mr-1.5" />
+                          <WhatsAppIcon size={14} className="mr-1.5 shrink-0" />
                           Order on WhatsApp
                         </a>
                         <a 
                           href="tel:+923328799437" 
-                          className="inline-flex items-center justify-center px-4 py-1.5 bg-brand-900 border border-brand-800 text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-brand-800 transition-colors shadow-md"
+                          className="inline-flex items-center justify-center px-3 py-1.5 bg-brand-900 border border-brand-800 text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full hover:bg-brand-800 transition-colors shadow-md whitespace-nowrap shrink-0"
                         >
                           <Phone size={14} className="mr-1.5" />
                           Call
@@ -387,21 +387,21 @@ export default function Menu() {
                   {selectedItem.name} <span className="text-accent ml-3">{selectedItem.price}</span>
                 </h3>
                 <p className="text-white/80 text-lg font-medium mb-6">{selectedItem.desc}</p>
-                <div className="flex flex-wrap items-center justify-center gap-4 w-full">
+                <div className="flex flex-row items-center justify-center gap-2 sm:gap-4 w-full px-2">
                   <a 
                     href="https://wa.me/923328799437" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-8 py-3 bg-[#25D366] text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-[#128C7E] transition-all hover:scale-105 shadow-lg shadow-[#25D366]/20"
+                    className="inline-flex items-center justify-center px-4 sm:px-8 py-3 bg-[#25D366] text-white text-xs sm:text-sm font-bold uppercase tracking-widest rounded-full hover:bg-[#128C7E] transition-all hover:scale-105 shadow-lg shadow-[#25D366]/20 whitespace-nowrap"
                   >
-                    <WhatsAppIcon size={18} className="mr-2" />
+                    <WhatsAppIcon size={16} className="mr-1.5 sm:mr-2 shrink-0" />
                     Order on WhatsApp
                   </a>
                   <a 
                     href="tel:+923328799437" 
-                    className="inline-flex items-center justify-center px-8 py-3 bg-white text-brand-950 text-sm font-bold uppercase tracking-widest rounded-full hover:bg-white/90 transition-all hover:scale-105 shadow-lg"
+                    className="inline-flex items-center justify-center px-4 sm:px-8 py-3 bg-white text-brand-950 text-xs sm:text-sm font-bold uppercase tracking-widest rounded-full hover:bg-white/90 transition-all hover:scale-105 shadow-lg whitespace-nowrap"
                   >
-                    <Phone size={18} className="mr-2" />
+                    <Phone size={16} className="mr-1.5 sm:mr-2 shrink-0" />
                     Call
                   </a>
                 </div>
