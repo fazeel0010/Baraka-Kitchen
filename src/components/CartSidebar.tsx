@@ -1,20 +1,24 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ShoppingBag, Plus, Minus, Trash2, CheckCircle } from 'lucide-react';
+import { X, ShoppingBag, Plus, Minus, Trash2, CheckCircle, Loader2 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import emailjs from '@emailjs/browser';
 
 export default function CartSidebar() {
   const { items, isCartOpen, setIsCartOpen, updateQuantity, removeFromCart, cartTotal, clearCart } = useCart();
   const [formData, setFormData] = useState({ name: '', phone: '', address: '' });
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleCheckout = (e: React.FormEvent) => {
+  const handleCheckout = async (e: React.FormEvent) => {
     e.preventDefault();
     if (items.length === 0) return;
     if (!formData.name || !formData.phone || !formData.address) {
       alert("Please fill out all fields for delivery.");
       return;
     }
+
+    setIsSubmitting(true);
 
     let orderDetails = `*New Order - Baraka Kitchen*%0A%0A`;
     orderDetails += `*Customer Details:*%0AName: ${formData.name}%0APhone: ${formData.phone}%0AAddress: ${formData.address}%0A%0A`;
@@ -26,28 +30,64 @@ export default function CartSidebar() {
     
     orderDetails += `%0A*Total Amount:* Rs. ${cartTotal.toLocaleString()}`;
 
+    // Prepare Email parameters
+    const orderItemsList = items.map(item => `- ${item.quantity}x ${item.name} (${item.priceStr})`).join('\n');
+    let emailSent = false;
+
+    try {
+      // If EmailJS variables are configured, use it to send the email directly in the background
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (serviceId && templateId && publicKey) {
+        await emailjs.send(
+          serviceId,
+          templateId,
+          {
+            customer_name: formData.name,
+            customer_phone: formData.phone,
+            customer_address: formData.address,
+            order_items: orderItemsList,
+            total_amount: `Rs. ${cartTotal.toLocaleString()}`,
+            to_email: 'order@barakakitchen.com'
+          },
+          publicKey
+        );
+        emailSent = true;
+      }
+    } catch (error) {
+      console.error("Email sending failed:", error);
+      // Fallback to mailto if EmailJS fails
+    }
+
     // WhatsApp Redirect
     const waUrl = `https://wa.me/923328799437?text=${orderDetails}`;
     
-    // Mailto string construction exactly matching WhatsApp structure
-    const mailBody = `New Order - Baraka Kitchen\n\nCustomer Details:\nName: ${formData.name}\nPhone: ${formData.phone}\nAddress: ${formData.address}\n\nOrder Items:\n${items.map(item => `- ${item.quantity}x ${item.name} (${item.priceStr})`).join('\n')}\n\nTotal Amount: Rs. ${cartTotal.toLocaleString()}`;
-    const mailtoUrl = `mailto:order@barakakitchen.com?subject=New Order from ${formData.name}&body=${encodeURIComponent(mailBody)}`;
-    
-    // Open email client in background, then open whatsapp in new tab
-    const iframe = document.createElement('iframe');
-    iframe.src = mailtoUrl;
-    iframe.style.display = 'none';
-    document.body.appendChild(iframe);
+    if (!emailSent) {
+      // Fallback: Mailto string construction if EmailJS is not configured or failed
+      const mailBody = `New Order - Baraka Kitchen\n\nCustomer Details:\nName: ${formData.name}\nPhone: ${formData.phone}\nAddress: ${formData.address}\n\nOrder Items:\n${orderItemsList}\n\nTotal Amount: Rs. ${cartTotal.toLocaleString()}`;
+      const mailtoUrl = `mailto:order@barakakitchen.com?subject=New Order from ${formData.name}&body=${encodeURIComponent(mailBody)}`;
+      
+      const iframe = document.createElement('iframe');
+      iframe.src = mailtoUrl;
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
+      
+      setTimeout(() => {
+        document.body.removeChild(iframe);
+      }, 500);
+    }
 
-    // Minor delay to ensure mailto triggers
+    // Open WhatsApp
     setTimeout(() => {
       window.open(waUrl, '_blank');
-      document.body.removeChild(iframe);
       
       clearCart();
       setIsCartOpen(false);
       setShowSuccessPopup(true);
-    }, 100);
+      setIsSubmitting(false);
+    }, 200);
   };
 
   return (
@@ -158,11 +198,12 @@ export default function CartSidebar() {
                   <button 
                     type="submit"
                     form="checkout-form"
-                    className="w-full py-4 text-white bg-accent font-bold uppercase tracking-widest rounded-xl hover:bg-accent/90 transition-all active:scale-[0.98] flex items-center justify-center gap-2 relative overflow-hidden group"
+                    disabled={isSubmitting}
+                    className="w-full py-4 text-white bg-accent font-bold uppercase tracking-widest rounded-xl hover:bg-accent/90 transition-all active:scale-[0.98] flex items-center justify-center gap-2 relative overflow-hidden group disabled:opacity-80 disabled:cursor-not-allowed"
                   >
-                    <div className="absolute inset-0 bg-white/20 w-full -translate-x-[110%] group-hover:translate-x-[110%] transition-transform duration-500 ease-in-out skew-x-12" />
-                    <ShoppingBag size={18} />
-                    <span>Place Order Now</span>
+                    {!isSubmitting && <div className="absolute inset-0 bg-white/20 w-full -translate-x-[110%] group-hover:translate-x-[110%] transition-transform duration-500 ease-in-out skew-x-12" />}
+                    {isSubmitting ? <Loader2 size={18} className="animate-spin" /> : <ShoppingBag size={18} />}
+                    <span>{isSubmitting ? "Processing..." : "Place Order Now"}</span>
                   </button>
                   <p className="mt-3 text-center text-[10px] text-brand-500 font-medium tracking-wide">
                     Order will be sent via WhatsApp & Email directly to the kitchen

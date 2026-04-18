@@ -272,7 +272,7 @@ export default function Menu() {
                 {category.items.map((item) => (
                   <div 
                     key={item.name} 
-                    className="flex gap-4 items-start cursor-pointer group/item p-4 rounded-2xl hover:bg-brand-100 transition-colors border border-transparent hover:border-brand-200"
+                    className="flex gap-4 items-stretch cursor-pointer group/item p-4 rounded-2xl hover:bg-brand-100 transition-colors border border-transparent hover:border-brand-200 h-full"
                     onClick={() => setSelectedItem(item)}
                   >
                     <div className="group flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 bg-brand-100 rounded-xl relative border border-brand-200 hover:z-50 cursor-pointer shadow-sm">
