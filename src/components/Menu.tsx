@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { UtensilsCrossed, X, ChevronLeft, ChevronRight, Phone } from 'lucide-react';
+import { UtensilsCrossed, X, ChevronLeft, ChevronRight, Phone, ShoppingBag } from 'lucide-react';
+import { useCart } from '../context/CartContext';
 
 const WhatsAppIcon = ({ size = 24, className = "" }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -107,6 +108,7 @@ const menuCategories = [
 export default function Menu() {
   const [selectedItem, setSelectedItem] = useState<any | null>(null);
   const [isDownloading, setIsDownloading] = useState(false);
+  const { addToCart } = useCart();
 
   const allItems = menuCategories.flatMap(category => category.items);
 
@@ -294,23 +296,17 @@ export default function Menu() {
                         <span className="text-base sm:text-lg font-bold text-accent whitespace-nowrap shrink-0">{item.price}</span>
                       </div>
                       <p className="text-brand-800/70 text-sm leading-relaxed">{item.desc}</p>
-                      <div className="flex flex-wrap items-center gap-2 mt-3" onClick={(e) => e.stopPropagation()}>
-                        <a 
-                          href={`https://wa.me/923328799437?text=${encodeURIComponent(`Hello Baraka Kitchen! I would like to order: ${item.name} (${item.price}).`)}`}
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="flex-1 min-w-[140px] inline-flex items-center justify-center px-2 py-2 sm:px-3 sm:py-1.5 bg-[#25D366] text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full hover:bg-[#128C7E] transition-colors shadow-md shadow-[#25D366]/20"
+                      <div className="flex mt-auto pt-3 pb-1" onClick={(e) => e.stopPropagation()}>
+                        <button 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            addToCart(item.name, item.price);
+                          }}
+                          className="w-full inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-2 bg-brand-900 text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full hover:bg-accent transition-colors shadow-md hover:scale-[1.02] active:scale-[0.98]"
                         >
-                          <WhatsAppIcon size={14} className="mr-1 sm:mr-1.5 shrink-0" />
-                          <span className="truncate">Order WhatsApp</span>
-                        </a>
-                        <a 
-                          href="tel:+923328799437" 
-                          className="flex-[0.5] min-w-[70px] inline-flex items-center justify-center px-2 py-2 sm:px-3 sm:py-1.5 bg-brand-900 border border-brand-800 text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full hover:bg-brand-800 transition-colors shadow-md shrink-0"
-                        >
-                          <Phone size={14} className="mr-1 sm:mr-1.5 shrink-0" />
-                          Call
-                        </a>
+                          <ShoppingBag size={14} className="mr-1.5 shrink-0" />
+                          <span>Add to Tray</span>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -387,23 +383,17 @@ export default function Menu() {
                   {selectedItem.name} <span className="text-accent ml-3">{selectedItem.price}</span>
                 </h3>
                 <p className="text-white/80 text-lg font-medium mb-6">{selectedItem.desc}</p>
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 w-full mt-2">
-                  <a 
-                    href={`https://wa.me/923328799437?text=${encodeURIComponent(`Hello Baraka Kitchen! I would like to order: ${selectedItem.name} (${selectedItem.price}).`)}`}
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-4 sm:px-8 py-3 bg-[#25D366] text-white text-xs sm:text-sm font-bold uppercase tracking-widest rounded-full hover:bg-[#128C7E] transition-all sm:hover:scale-105 shadow-lg shadow-[#25D366]/20"
+                <div className="flex justify-center w-full mt-2">
+                  <button 
+                    onClick={() => {
+                      addToCart(selectedItem.name, selectedItem.price);
+                      setSelectedItem(null);
+                    }}
+                    className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-accent text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-accent/90 transition-all sm:hover:scale-105 active:scale-95 shadow-lg shadow-accent/30"
                   >
-                    <WhatsAppIcon size={16} className="mr-2 shrink-0" />
-                    <span>Order on WhatsApp</span>
-                  </a>
-                  <a 
-                    href="tel:+923328799437" 
-                    className="inline-flex items-center justify-center px-4 sm:px-8 py-3 bg-white text-brand-950 text-xs sm:text-sm font-bold uppercase tracking-widest rounded-full hover:bg-white/90 transition-all sm:hover:scale-105 shadow-lg shadow-black/5"
-                  >
-                    <Phone size={16} className="mr-2 shrink-0" />
-                    <span>Call to Order</span>
-                  </a>
+                    <ShoppingBag size={18} className="mr-2 shrink-0" />
+                    <span>Add to Tray</span>
+                  </button>
                 </div>
               </div>
             </motion.div>

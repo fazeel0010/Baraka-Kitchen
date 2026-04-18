@@ -50,7 +50,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="text-lg font-serif font-bold text-brand-50 mb-6 uppercase tracking-widest">Contact</h4>
-            <ul className="space-y-4 text-sm font-medium">
+            <ul className="space-y-4 text-sm font-medium mb-6">
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-accent shrink-0 mt-1" />
                 <span>Nawab St, Model Colony Surti Housing Society, Karachi, 75080, Pakistan</span>
@@ -64,6 +64,23 @@ export default function Footer() {
                 <span>order@barakakitchen.com</span>
               </li>
             </ul>
+            <div className="flex flex-col gap-3">
+              <a 
+                href="https://wa.me/923328799437" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-2.5 bg-[#25D366] text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-[#128C7E] transition-colors shadow-md shadow-[#25D366]/20"
+              >
+                Contact on WhatsApp
+              </a>
+              <a 
+                href="tel:+923328799437" 
+                className="inline-flex items-center justify-center px-6 py-2.5 bg-brand-50 text-brand-950 text-xs font-bold uppercase tracking-wider rounded-full hover:bg-brand-50/90 transition-colors shadow-md"
+              >
+                <Phone size={16} className="mr-2" />
+                Contact on Phone
+              </a>
+            </div>
           </div>
 
           {/* Hours */}

@@ -12,10 +12,12 @@ import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import CartSidebar from './components/CartSidebar';
 
 export default function App() {
   return (
     <main className="min-h-screen bg-brand-50 selection:bg-accent/30 selection:text-brand-950">
+      <CartSidebar />
       <Navbar />
       <Hero />
       <Story />

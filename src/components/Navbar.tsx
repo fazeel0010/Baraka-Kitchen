@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, UtensilsCrossed } from 'lucide-react';
+import { Menu, X, UtensilsCrossed, ShoppingBag } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useCart } from '../context/CartContext';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { cartCount, setIsCartOpen } = useCart();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +35,6 @@ export default function Navbar() {
           <span className="-ml-1 md:-ml-4 text-white drop-shadow-sm truncate">Baraka Kitchen</span>
         </a>
 
-
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
@@ -45,21 +46,39 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-          <a
-            href="#location"
-            className="px-6 py-2.5 bg-accent text-white rounded-full hover:bg-accent/90 transition-colors uppercase text-xs font-bold tracking-widest shadow-lg shadow-accent/20"
+          <button
+            onClick={() => setIsCartOpen(true)}
+            className="relative p-2 text-white hover:text-accent transition-colors"
           >
-            Contact Us
-          </a>
+            <ShoppingBag size={24} />
+            {cartCount > 0 && (
+              <span className="absolute top-0 right-0 bg-accent text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full translate-x-1/4 -translate-y-1/4">
+                {cartCount}
+              </span>
+            )}
+          </button>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-brand-50"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        {/* Mobile Nav Toggle & Cart */}
+        <div className="md:hidden flex items-center gap-4">
+          <button
+            onClick={() => setIsCartOpen(true)}
+            className="relative p-2 text-brand-50 hover:text-accent transition-colors"
+          >
+            <ShoppingBag size={24} />
+            {cartCount > 0 && (
+              <span className="absolute top-0 right-0 bg-accent text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full translate-x-1/4 -translate-y-1/4">
+                {cartCount}
+              </span>
+            )}
+          </button>
+          <button
+            className="text-brand-50"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav */}
