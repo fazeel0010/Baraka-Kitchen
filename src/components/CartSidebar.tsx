@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ShoppingBag, Plus, Minus, Trash2, CheckCircle, Loader2 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
-import emailjs from '@emailjs/browser';
 
 export default function CartSidebar() {
   const { items, isCartOpen, setIsCartOpen, updateQuantity, removeFromCart, cartTotal, clearCart } = useCart();
@@ -35,30 +34,26 @@ export default function CartSidebar() {
     let emailSent = false;
 
     try {
-      // If EmailJS variables are configured, use it to send the email directly in the background
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-      if (serviceId && templateId && publicKey) {
-        await emailjs.send(
-          serviceId,
-          templateId,
-          {
-            customer_name: formData.name,
-            customer_phone: formData.phone,
-            customer_address: formData.address,
-            order_items: orderItemsList,
-            total_amount: `Rs. ${cartTotal.toLocaleString()}`,
-            to_email: 'order@barakakitchen.com'
-          },
-          publicKey
-        );
+      const response = await fetch('/api/order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          customerDetails: formData,
+          orderItems: orderItemsList,
+          totalAmount: `Rs. ${cartTotal.toLocaleString()}`
+        })
+      });
+      
+      if (response.ok) {
         emailSent = true;
+      } else {
+        console.warn("Backend email sending failed, falling back to mailto");
       }
     } catch (error) {
       console.error("Email sending failed:", error);
-      // Fallback to mailto if EmailJS fails
+      // Fallback to mailto if it fails
     }
 
     // WhatsApp Redirect

@@ -30,9 +30,20 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-        <a href="#" className="flex items-center text-xl sm:text-2xl md:text-3xl font-serif font-bold text-brand-50 tracking-tight group shrink-0">
-          <img src="https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png" alt="Baraka Kitchen Logo" className="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0" />
-          <span className="-ml-1 md:-ml-4 text-white drop-shadow-sm truncate">Baraka Kitchen</span>
+        <a href="#" className="flex items-center group shrink-0 transition-all">
+          <img 
+            src="https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png" 
+            alt="Baraka Kitchen Logo" 
+            className="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0 relative z-10 group-hover:scale-105 transition-transform duration-500" 
+          />
+          <div className="flex flex-col justify-center -ml-1 sm:-ml-3 mt-1 sm:mt-2">
+            <span className="text-xl sm:text-2xl md:text-[28px] font-serif font-bold text-white tracking-wider leading-none drop-shadow-md">
+              Baraka
+            </span>
+            <span className="text-[9px] sm:text-[10px] md:text-xs font-sans uppercase tracking-[0.35em] text-accent font-bold mt-1.5 leading-none drop-shadow-sm pl-0.5 opacity-90">
+              Kitchen
+            </span>
+          </div>
         </a>
 
         {/* Desktop Nav */}

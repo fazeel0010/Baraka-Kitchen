@@ -18,8 +18,20 @@ export default function Footer() {
           
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <img src="https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png" alt="Braka Biryani Logo" className="h-24 md:h-32 w-auto" />
+            <div className="flex items-center mb-6">
+              <img 
+                src="https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png" 
+                alt="Baraka Kitchen Logo" 
+                className="h-20 md:h-28 w-auto object-contain relative z-10" 
+              />
+              <div className="flex flex-col justify-center -ml-2 sm:-ml-4 mt-2">
+                <span className="text-2xl md:text-3xl font-serif font-bold text-white tracking-wider leading-none">
+                  Baraka
+                </span>
+                <span className="text-[10px] md:text-xs font-sans uppercase tracking-[0.35em] text-accent font-bold mt-1.5 leading-none pl-0.5 opacity-90">
+                  Kitchen
+                </span>
+              </div>
             </div>
             <p className="text-sm leading-relaxed mb-8">
               Authentic dum biryani and royal Pakistani cuisine, served in an elegant, rustic setting.
