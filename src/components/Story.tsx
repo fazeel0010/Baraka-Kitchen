@@ -40,7 +40,7 @@ export default function Story() {
             </span>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-900 mb-8 leading-tight tracking-tight">
               Home-Cooked <br/>
-              <span className="text-accent">Perfection</span>
+              <span className="italic text-brand-800">Perfection</span>
             </h2>
             
             <div className="space-y-6 text-brand-800/80 font-medium leading-relaxed text-lg">

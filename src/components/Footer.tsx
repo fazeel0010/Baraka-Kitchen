@@ -17,26 +17,26 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           
           {/* Brand */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center mb-6">
+          <div className="lg:col-span-1 flex flex-col items-center text-center lg:items-start lg:text-left">
+            <div className="flex flex-col items-center lg:items-center mb-6">
               <img 
                 src="https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png" 
                 alt="Baraka Kitchen Logo" 
-                className="h-20 md:h-28 w-auto object-contain relative z-10" 
+                className="h-20 md:h-28 w-auto object-contain relative z-10 mb-2" 
               />
-              <div className="flex flex-col justify-center -ml-2 sm:-ml-4 mt-2">
-                <span className="text-2xl md:text-3xl font-serif font-bold text-white tracking-wider leading-none">
+              <div className="flex flex-col items-center lg:items-center mt-1">
+                <span className="text-3xl md:text-4xl font-brand font-black bg-gradient-to-r from-amber-300 via-accent to-orange-600 bg-clip-text text-transparent tracking-tight leading-none pb-1">
                   Baraka
                 </span>
-                <span className="text-[10px] md:text-xs font-sans uppercase tracking-[0.35em] text-accent font-bold mt-1.5 leading-none pl-0.5 opacity-90">
+                <span className="text-[10px] md:text-xs font-sans uppercase tracking-[0.4em] text-white/90 font-bold leading-none pl-[0.4em]">
                   Kitchen
                 </span>
               </div>
             </div>
-            <p className="text-sm leading-relaxed mb-8">
+            <p className="flex justify-center lg:justify-start text-sm leading-relaxed mb-8">
               Authentic dum biryani and royal Pakistani cuisine, served in an elegant, rustic setting.
             </p>
-            <div className="flex space-x-4 mb-8">
+            <div className="flex justify-center lg:justify-start space-x-4 mb-8">
               <a href="#" className="w-10 h-10 rounded-full border border-brand-50/20 flex items-center justify-center hover:bg-accent hover:text-brand-950 hover:border-accent transition-all">
                 <Instagram size={18} />
               </a>

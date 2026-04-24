@@ -36,11 +36,11 @@ export default function Navbar() {
             alt="Baraka Kitchen Logo" 
             className="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0 relative z-10 group-hover:scale-105 transition-transform duration-500" 
           />
-          <div className="flex flex-col justify-center -ml-1 sm:-ml-3 mt-1 sm:mt-2">
-            <span className="text-xl sm:text-2xl md:text-[28px] font-serif font-bold text-white tracking-wider leading-none drop-shadow-md">
+          <div className="flex flex-col justify-center -ml-1 sm:-ml-3">
+            <span className="text-2xl sm:text-3xl md:text-[34px] font-brand font-black bg-gradient-to-r from-amber-300 via-accent to-orange-600 bg-clip-text text-transparent tracking-tight leading-none drop-shadow-sm pb-1">
               Baraka
             </span>
-            <span className="text-[9px] sm:text-[10px] md:text-xs font-sans uppercase tracking-[0.35em] text-accent font-bold mt-1.5 leading-none drop-shadow-sm pl-0.5 opacity-90">
+            <span className="text-[9px] sm:text-[10px] md:text-[11px] font-sans uppercase tracking-[0.4em] text-white/90 font-bold leading-none drop-shadow-sm pl-1">
               Kitchen
             </span>
           </div>
