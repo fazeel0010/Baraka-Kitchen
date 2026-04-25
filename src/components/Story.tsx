@@ -57,9 +57,9 @@ export default function Story() {
 
             <div className="mt-12 pt-8 border-t border-brand-900/10">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Signature_of_John_Hancock.svg/1200px-Signature_of_John_Hancock.svg.png" 
+                src="https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/areej%20signature.png" 
                 alt="Chef Signature" 
-                className="h-12 opacity-40 filter invert-[0.2]"
+                className="h-40 sm:h-44 opacity-40 filter invert-[0.2]"
                 referrerPolicy="no-referrer"
               />
               <p className="mt-4 text-sm uppercase tracking-widest text-brand-900/60 font-medium">
