@@ -55,14 +55,14 @@ export default function Story() {
               </p>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-brand-900/10">
+            <div className="mt-8 pt-6 border-t border-brand-900/10">
               <img 
                 src="https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/areej%20signature.png" 
                 alt="Chef Signature" 
-                className="h-40 sm:h-44 opacity-40 filter invert-[0.2]"
+                className="h-40 sm:h-44 object-contain -ml-4 -mt-8 -mb-6 sm:-mb-8 opacity-40 filter invert-[0.2]"
                 referrerPolicy="no-referrer"
               />
-              <p className="mt-4 text-sm uppercase tracking-widest text-brand-900/60 font-medium">
+              <p className="mt-0 text-sm uppercase tracking-widest text-brand-900/60 font-medium">
                 Head Chef & Founder
               </p>
             </div>
