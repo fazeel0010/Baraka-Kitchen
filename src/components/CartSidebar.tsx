@@ -29,50 +29,8 @@ export default function CartSidebar() {
     
     orderDetails += `%0A*Total Amount:* Rs. ${cartTotal.toLocaleString()}`;
 
-    // Prepare Email parameters
-    const orderItemsList = items.map(item => `- ${item.quantity}x ${item.name} (${item.priceStr})`).join('\n');
-    let emailSent = false;
-
-    try {
-      const response = await fetch('/api/order', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          customerDetails: formData,
-          orderItems: orderItemsList,
-          totalAmount: `Rs. ${cartTotal.toLocaleString()}`
-        })
-      });
-      
-      if (response.ok) {
-        emailSent = true;
-      } else {
-        console.warn("Backend email sending failed, falling back to mailto");
-      }
-    } catch (error) {
-      console.error("Email sending failed:", error);
-      // Fallback to mailto if it fails
-    }
-
     // WhatsApp Redirect
     const waUrl = `https://wa.me/923328799437?text=${orderDetails}`;
-    
-    if (!emailSent) {
-      // Fallback: Mailto string construction if EmailJS is not configured or failed
-      const mailBody = `New Order - Baraka Kitchen\n\nCustomer Details:\nName: ${formData.name}\nPhone: ${formData.phone}\nAddress: ${formData.address}\n\nOrder Items:\n${orderItemsList}\n\nTotal Amount: Rs. ${cartTotal.toLocaleString()}`;
-      const mailtoUrl = `mailto:order@barakakitchen.com?subject=New Order from ${formData.name}&body=${encodeURIComponent(mailBody)}`;
-      
-      const iframe = document.createElement('iframe');
-      iframe.src = mailtoUrl;
-      iframe.style.display = 'none';
-      document.body.appendChild(iframe);
-      
-      setTimeout(() => {
-        document.body.removeChild(iframe);
-      }, 500);
-    }
 
     // Open WhatsApp
     setTimeout(() => {
