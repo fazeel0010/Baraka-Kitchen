@@ -21,6 +21,8 @@ export default function Catering() {
                 alt="Large biryani degh cooking" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-950 via-transparent to-transparent"></div>
             </div>

@@ -20,6 +20,8 @@ export default function Story() {
                 alt="Spices and ingredients" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             {/* Decorative Element */}
@@ -61,6 +63,8 @@ export default function Story() {
                 alt="Chef Signature" 
                 className="h-40 sm:h-44 object-contain -ml-4 -mt-8 -mb-6 sm:-mb-8 opacity-40 filter invert-[0.2]"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
               <p className="mt-0 text-sm uppercase tracking-widest text-brand-900/60 font-medium">
                 Head Chef & Founder

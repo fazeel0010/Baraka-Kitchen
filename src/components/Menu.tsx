@@ -281,7 +281,9 @@ export default function Menu() {
                           src={item.image} 
                           alt={item.name} 
                           className="w-full h-full object-cover rounded-xl transition-all duration-300 origin-center group-hover:scale-[2.5] group-hover:shadow-2xl relative z-10 group-hover:z-50" 
-                          referrerPolicy="no-referrer" 
+                          referrerPolicy="no-referrer"
+                          loading="lazy"
+                          decoding="async"
                         />
                       ) : (
                         <div className="w-full h-full flex flex-col items-center justify-center text-brand-900/20 bg-brand-100 rounded-xl">
@@ -371,7 +373,9 @@ export default function Menu() {
                   src={selectedItem.image} 
                   alt={selectedItem.name} 
                   className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl" 
-                  referrerPolicy="no-referrer" 
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
               ) : (
                 <div className="w-full max-w-md aspect-square flex items-center justify-center bg-brand-100 rounded-lg">

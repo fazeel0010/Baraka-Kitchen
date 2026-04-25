@@ -23,6 +23,8 @@ export default function Footer() {
                 src="https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png" 
                 alt="Baraka Kitchen Logo" 
                 className="h-20 md:h-28 w-auto object-contain relative z-10 mb-2" 
+                loading="lazy"
+                decoding="async"
               />
 <div className="flex flex-col items-center mt-1 self-center">
                 <span className="text-3xl md:text-4xl font-brand font-black bg-gradient-to-r from-amber-300 via-accent to-orange-600 bg-clip-text text-transparent tracking-tight leading-none pb-1">
