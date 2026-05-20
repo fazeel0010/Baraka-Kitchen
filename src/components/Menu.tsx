@@ -12,13 +12,24 @@ const WhatsAppIcon = ({ size = 24, className = "" }) => (
 
 const menuCategories = [
   {
+    title: "Popular",
+    description: "Most ordered right now.",
+    items: [
+      { name: "Beef Biryani", price: "from Rs. 530", desc: "Aromatic basmati rice cooked with rich spices. Juicy beef full of flavor in every bite!", image: "https://images.deliveryhero.io/image/fd-pk/Products/98715225.jpg?width=150&height=150" },
+      { name: "Ashrafi Zarda", price: "from Rs. 250", desc: "250g serving — traditional sweet zarda with sela rice, rich sweetness, and asharfia pearls.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/9aee0761-6b29-4085-9356-7a6008dd972e.jpg?width=150&height=150" },
+      { name: "Chakki Atta Paratha", price: "Rs. 125", desc: "Freshly made paratha prepared with pure chakki atta, soft inside and crispy outside", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/c0f26ee6-93b5-4e3a-a177-a675a5def7e2.jpg?width=150&height=150" },
+      { name: "Signature Deal 1", price: "from Rs. 895", desc: "500g. Beef biryani, 1 shami kabab with raita", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/101802948/a1f8d916-b9df-4907-b8ba-d28e073f017d.jpg?width=150&height=150" },
+      { name: "Chicken Roll", price: "Rs. 350", desc: "Crispy puri wrapped with juicy chicken salad and sauces", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/7dbfc815-ec99-4320-b2e8-a9f81d5753e8.jpg?width=150&height=150" }
+    ]
+  },
+  {
     title: "Signature Biryani Deals",
     description: "Value-packed biryani deals served with kabab and raita",
     items: [
-      { name: "Signature Deal 1", price: "Rs.670", desc: "500-gm Beef Biryani, 1 Shami Kabab with Raita.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-1.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Signature Deal 1", price: "Rs.895", desc: "500-gm Beef Biryani, 1 Shami Kabab with Raita.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-1.png?q=80&w=200&auto=format&fit=crop" },
       { name: "Signature Deal 2", price: "Rs.700", desc: "500-gm Chicken Biryani, 1 Shami Kabab with Raita.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20-6.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Signature Deal 3", price: "Rs.1,499", desc: "1-kg Beef Biryani 2 Shami Kabab, 2 Raita and 2 300-ml soft drink", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20with%202%20soft%20drink.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Signature Deal 4", price: "Rs.1,375", desc: "1-kg Chicken Biryani 2 Shami Kabab, 2 Raita and 2 300-ml soft drink", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20with%202%20soft%20drink.png?q=80&w=200&auto=format&fit=crop" }
+      { name: "Signature Deal 3", price: "Rs.2,030", desc: "1-kg Beef Biryani 2 Shami Kabab, 2 Raita and 2 300-ml soft drink", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20with%202%20soft%20drink.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Signature Deal 4", price: "Rs.1,400", desc: "1-kg Chicken Biryani 2 Shami Kabab, 2 Raita and 2 300-ml soft drink", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20with%202%20soft%20drink.png?q=80&w=200&auto=format&fit=crop" }
     ]
   },
   {
@@ -26,24 +37,69 @@ const menuCategories = [
     description: "Perfect beginnings from our kitchen.",
     items: [
       { name: "Beef Resha Shami Kabab", price: "Rs.120", desc: "Authentic sil batta beef shami kababs made with hand ground beef and traditional spices for a rick flavor.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Kabab.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Signature Chicken Roll", price: "Rs. 150", desc: "Big-sized crispy deep-fried spring roll filled with chicken, fresh vegetables, and flavorful spices.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/eebf1896-2d16-48ba-ae2c-4ff2b1915876.jpg?width=150&height=150" },
+      { name: "Crispy Bites", price: "Rs. 550", desc: "8 pieces served with fries", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/4be4c4fb-1406-43cf-84ac-9d1ef7d7402d.jpg?width=150&height=150" }
     ]
   },
   {
     title: "Baraka Kitchen",
     description: "To complement your main course.",
     items: [
-      { name: "Beef Biryani 500-gm", price: "Rs.540", desc: "Aromatic basmati rice cooked with rich spices. Juicy beef full of flavor in every bite!", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-5.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Chicken Biryani 500-gm", price: "Rs.380", desc: "Fragrant basmati rice cooked with seasoned chicken and spices.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20-4.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Beef Biryani 1-kg", price: "Rs.1080", desc: "Aromatic basmati rice cooked with rich spices. Juicy beef full of flavor in every bite!", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-5.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Beef Biryani 500-gm", price: "Rs.530", desc: "Aromatic basmati rice cooked with rich spices. Juicy beef full of flavor in every bite!", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-5.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Chicken Biryani 500-gm", price: "Rs.440", desc: "Fragrant basmati rice cooked with seasoned chicken and spices.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20-4.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Beef Biryani 1-kg", price: "Rs.1060", desc: "Aromatic basmati rice cooked with rich spices. Juicy beef full of flavor in every bite!", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-5.png?q=80&w=200&auto=format&fit=crop" },
       { name: "Chicken Biryani 1-kg", price: "Rs.880", desc: "Fragrant basmati rice cooked with seasoned chicken and spices.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20-4.png?q=80&w=200&auto=format&fit=crop" },
+    ]
+  },
+  {
+    title: "Chinese",
+    description: "Delicious and flavorful Chinese dishes.",
+    items: [
+      { name: "Chicken Chowmein", price: "Rs. 785", desc: "Stir-fried noodles tossed with tender chicken, fresh vegetables, and flavorful sauces", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/abef1619-d9db-42fe-9d70-70847bb0f9d5.jpg?width=150&height=150" },
+      { name: "Chicken Manchurian w/ Fried Rice", price: "Rs. 1,299", desc: "Chicken Manchurian in flavorful sauces with vegetable fried rice.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/28bd5bf2-74d5-4f3a-a697-65afa7e13d0d.jpg?width=150&height=150" },
+      { name: "Chicken Shashlik w/ Rice", price: "Rs. 1,150", desc: "Chicken cooked in flavorful sauce with capsicum and tomatoes, served with fried rice.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/876cdeb5-05ff-45d8-90a6-efd4de300876.jpg?width=150&height=150" }
     ]
   },
   {
     title: "Rolls & Wraps",
     description: "Freshly prepared rolls packed with delicious fillings.",
     items: [
-      { name: "Chicken Roll", price: "Rs.540", desc: "Soft paratha filled with flavorful chicken and sauces.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Roll.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Zinger Roll", price: "Rs.440", desc: "Crispy zinger chicken wrapped in a soft paratha with fresh sauces.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Zinger%20Roll.png?q=80&w=200&auto=format&fit=crop" }
+      { name: "Chicken Roll", price: "Rs. 350", desc: "Crispy puri wrapped with juicy chicken salad and sauces", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/7dbfc815-ec99-4320-b2e8-a9f81d5753e8.jpg?width=150&height=150" },
+      { name: "Zinger Roll", price: "Rs. 480", desc: "Crunchy zinger fillet rolled in soft puri with fresh salad and creamy sauces.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/184326aa-01b1-4b93-9de0-35c7dcbc52e7.jpg?width=150&height=150" }
+    ]
+  },
+  {
+    title: "Sandwiches",
+    description: "Toasted sandwiches packed with flavor.",
+    items: [
+      { name: "Beef Shami Toast", price: "Rs. 285", desc: "Tender minced beef shami kebab served on toasted bread with fresh onions cilantro and tangy tamarind chutney for an authentic Pakistani sandwich experience", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/17a08f34-3df2-4099-816a-10231939bfcc.jpg?width=150&height=150" },
+      { name: "Chicken Toast", price: "Rs. 360", desc: "Golden toasted bread stuffed with creamy, seasoned chicken — crispy outside and soft inside.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/13d2e49c-eaf7-498b-8a42-82b7b9b739fd.jpg?width=150&height=150" }
+    ]
+  },
+  {
+    title: "Fast Food",
+    description: "Quick and delightful fast food options.",
+    items: [
+      { name: "Chicken Macaroni", price: "Rs. 574", desc: "Delicious chicken macaroni with juicy chicken chunks creamy sauce and fresh vegetables", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/6fcdfda0-6a12-4eab-b531-c8f4f7be80ce.jpg?width=150&height=150" }
+    ]
+  },
+  {
+    title: "Fried & BBQ",
+    description: "Delicious BBQ and fried items.",
+    items: [
+      { name: "Chicken Leg Tikka", price: "Rs. 550", desc: "Juicy and smoky chicken tikka leg.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/4e18b749-cdd9-46b3-af04-b4ac0e22cb19.jpg?width=150&height=150" }
+    ]
+  },
+  {
+    title: "Breakfast",
+    description: "Start your day right.",
+    items: [
+      { name: "Chakki Atta Paratha", price: "Rs. 125", desc: "Freshly made paratha prepared with pure chakki atta, soft inside and crispy outside", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/c0f26ee6-93b5-4e3a-a177-a675a5def7e2.jpg?width=150&height=150" },
+      { name: "Crispy Paratha", price: "Rs. 115", desc: "Fluffy and crispy paratha, freshly cooked", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/567a367d-5242-4e49-aa97-5f02b5e26f4c.jpg?width=150&height=150" },
+      { name: "Plain Omelette", price: "Rs. 100", desc: "One-egg omelette cooked with spices.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/964c48ab-3e1f-4553-84a4-57b708c7ddf4.jpg?width=150&height=150" },
+      { name: "Masala Omelette", price: "Rs. 120", desc: "One-egg omelette cooked with onions, chillies, and aromatic spices", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/edc71e55-e22b-48f2-bfa7-d9180a10dada.jpg?width=150&height=150" },
+      { name: "Special Signature Chai", price: "Rs. 150", desc: "Rich, creamy elaichi chai with a smooth aroma and comforting taste.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/148f5bc1-a65d-4808-9c1c-76f535b7d2b4.jpg?width=150&height=150" },
+      { name: "Plain Chai", price: "Rs. 125", desc: "boiled water, tea, sugar, then milk.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/86a24356-bfb6-421c-a6ea-0af54d864531.jpg?width=150&height=150" }
     ]
   },
   {
@@ -60,47 +116,48 @@ const menuCategories = [
     title: "Side & Add ons",
     description: "Perfect sides to enhance your meal.",
     items: [
-      { name: "Puri", price: "Rs.80", desc: "Soft and fluffy puri served fresh.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Puri.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Puri", price: "Rs. 80", desc: "Soft and fluffy puri served fresh.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/ded40310-1889-433b-ba62-c4f6eb66d4b6.jpg?width=150&height=150" },
+      { name: "Chakki Roti", price: "Rs. 60", desc: "Soft and wholesome wheat flour roti, perfect with your meal.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/61fc2e54-bd88-4acb-8ecf-7a6aefa6c045.jpg?width=150&height=150" },
       { name: "Raita", price: "Rs.70", desc: "Cool & creamy yogurt raita to balance the spices.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Raita.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Special Imli Chutney", price: "Rs.80", desc: "Sweet and tangy tamarind chutney made with our special recipe.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Imli%20Chutni.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Salad", price: "Rs.70", desc: "Fresh mixed salad.", image: "https://images.deliveryhero.io/image/fd-pk/Products/98715230.jpg?width=150&height=150" }
+      { name: "Special Imli Chutney", price: "Rs. 80", desc: "Khatti meethi imli ki chatni, rich in flavor and irresistibly delicious — made our special way.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/a8b3db17-b083-4bd0-8f4a-c10cd87921ac.jpg?width=150&height=150" },
+      { name: "Salad", price: "Rs. 70", desc: "Fresh mixed salad.", image: "https://images.deliveryhero.io/image/fd-pk/Products/98715230.jpg?width=150&height=150" }
     ]
   },
   {
     title: "Desserts",
     description: "A sweet conclusion to your meal.",
     items: [
-      { name: "Ashrafi Zarda", price: "Rs.250", desc: "250g serving — traditional sweet zarda with sela rice, rich sweetness, and asharfia pearls.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/9aee0761-6b29-4085-9356-7a6008dd972e.jpg?width=150&height=150" }
+      { name: "Ashrafi Zarda", price: "from Rs. 250", desc: "250g serving — traditional sweet zarda with sela rice, rich sweetness, and asharfia pearls.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/9aee0761-6b29-4085-9356-7a6008dd972e.jpg?width=150&height=150" }
     ]
   },
-    {
+  {
     title: "Baraka Fries",
     description: "Crispy golden fries served hot — the perfect snack or side.",
     items: [
-      { name: "Plain Fries", price: "Rs.250", desc: "Classic crispy fries, perfect for one.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Plain%20Fries.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Masala Fries", price: "Rs.280", desc: "Crispy fries tossed in flavorful masala seasoning.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Masala%20Fries.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Plain Fries", price: "Rs. 250", desc: "Classic crispy fries, perfect for one.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/12c7d12e-d38d-47c2-9e75-4c1e8882c699.jpg?width=150&height=150" },
+      { name: "Masala Fries", price: "Rs. 280", desc: "Crispy fries tossed in flavorful masala seasoning.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/2aa71b50-00e7-4bf4-a248-da5d2ce5d603.jpg?width=150&height=150" },
     ]
   },
   {
     title: "Beverages",
     description: "Refreshing drinks to quench your thirst and pair perfectly with your meal.",
     items: [
-      { name: "Fizup Next 500 ml", price: "Rs.150", desc: "Chilled fizzy soft drink for a refreshing taste.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Fizzup%20500%20ml.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Cola Next 300 ml", price: "Rs.115", desc: "Classic cola flavor served chilled.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Cola%20Next.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Fizup Next 300 ml", price: "Rs.99", desc: "Light and refreshing lemon-lime soft drink.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Fizzup%20up%20300%20ml.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Pakola Cream Soda 300 ml", price: "Rs.99", desc: "Famous creamy soda with a unique flavor.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Pakola%20355%20ml.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Gourmet Cola", price: "Rs.150", desc: "Rich cola drink served cold for maximum refreshment.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Gourmet%20cola%20300%20ml.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "7up 345 ml", price: "Rs.150", desc: "Crisp lemon-lime soda to refresh your palate.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%207up%20300%20ml.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Pepsi 345 ml", price: "Rs.125", desc: "Bold and refreshing cola drink served chilled.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20pepsi%20300%20ml.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Mirinda 345 ml", price: "Rs.150", desc: "Sweet and tangy orange flavored soda.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Mirinda%20300%20ml.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Slice 355 ml", price: "Rs.155", desc: "Delicious mango juice drink, sweet and refreshing.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Slice%20juice%20355%20ml.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Fizup Next 500 ml", price: "Rs. 150", desc: "Soft drink", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/10fe2e9b-8ae1-4f9a-bf6e-1e6eb1c5a19d.jpg?width=150&height=150" },
+      { name: "Cola Next 300 ml", price: "Rs. 115", desc: "Soft drink", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/ecdc9ff1-b4cb-4926-8a7d-e78e44657638.jpg?width=150&height=150" },
+      { name: "Fizup Next 300 ml", price: "Rs. 115", desc: "Soft drink", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/4fbbebc7-f2b7-4daf-9a65-69946acd444b.jpg?width=150&height=150" },
+      { name: "Pakola Cream Soda 300 ml", price: "Rs. 115", desc: "Soft drink", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/ec20d798-2a3e-4f25-961a-5846cdc159c5.jpg?width=150&height=150" },
+      { name: "Gourmet Cola", price: "Rs. 150", desc: "Soft drink", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/b26540d5-e22b-4ea7-a554-53810611f0f0.jpg?width=150&height=150" },
+      { name: "7up 345 ml", price: "Rs. 150", desc: "Refreshing soft drink to enjoy with your meal.", image: "https://images.deliveryhero.io/image/fd-pk/Products/98715233.jpg?width=150&height=150" },
+      { name: "Pepsi 345 ml", price: "Rs. 150", desc: "Refreshing soft drink to enjoy with your meal.", image: "https://images.deliveryhero.io/image/fd-pk/Products/98715232.jpg?width=150&height=150" },
+      { name: "Mirinda 345 ml", price: "Rs. 150", desc: "Refreshing soft drink to enjoy with your meal.", image: "https://images.deliveryhero.io/image/fd-pk/Products/98715231.jpg?width=150&height=150" },
+      { name: "Slice 355 ml", price: "Rs. 155", desc: "Mango juice", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/f2b70f62-9b94-4ae6-ad0d-2d12da6da932.jpg?width=150&height=150" },
     ]
   },
-    {
+  {
     title: "Cutlery",
     description: "Utensils provided to help you enjoy your meal.",
     items: [
-      { name: "Plastic spoon", price: "Rs.10", desc: "Convenient disposable spoon for eating.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Cutlery.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Plastic spoon", price: "Rs. 10", desc: "Plastic Spoon", image: "https://images.deliveryhero.io/image/fd-pk/Products/98715234.jpg?width=150&height=150" },
     ]
   }
 ];
