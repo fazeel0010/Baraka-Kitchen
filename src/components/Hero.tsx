@@ -7,7 +7,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url("https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Biryani%20Cover%20New.png")',
+          backgroundImage: 'url("https://wsrv.nl/?url=cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Biryani%20Cover%20New.png&w=1200&output=webp&q=80")',
         }}
       >
         {/* Dark Overlay */}

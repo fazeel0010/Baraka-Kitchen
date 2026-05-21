@@ -4,7 +4,7 @@ import { Users, PartyPopper } from 'lucide-react';
 export default function Catering() {
   return (
     <section className="py-20 bg-brand-950 text-white relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10 bg-[url('https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-5.png')] bg-cover bg-center"></div>
+      <div className="absolute inset-0 opacity-10 bg-[url('https://wsrv.nl/?url=cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-5.png&w=1200&output=webp&q=80')] bg-cover bg-center"></div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-12">
           

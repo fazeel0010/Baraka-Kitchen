@@ -4,7 +4,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 const customIcon = new L.Icon({
-  iconUrl: 'https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png',
+  iconUrl: 'https://wsrv.nl/?url=cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png&w=120&output=webp&q=80',
   iconSize: [60, 60],
   iconAnchor: [30, 30],
   popupAnchor: [0, -30]
@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="lg:col-span-1 flex flex-col items-center text-center lg:items-start lg:text-left">
             <div className="flex flex-col items-center lg:items-center mb-6">
               <img 
-                src="https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png" 
+                src="https://wsrv.nl/?url=cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png&w=400&output=webp&q=80" 
                 alt="Baraka Kitchen Logo" 
                 className="h-20 md:h-28 w-auto object-contain relative z-10 mb-2" 
                 loading="lazy"
@@ -72,10 +72,6 @@ export default function Footer() {
               <li className="flex items-center space-x-3">
                 <Phone size={18} className="text-accent shrink-0" />
                 <span>+92 (332) 879-9437</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Mail size={18} className="text-accent shrink-0" />
-                <span>order@barakakitchen.com</span>
               </li>
             </ul>
             <div className="flex flex-col gap-3">

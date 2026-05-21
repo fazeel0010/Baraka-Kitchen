@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <a href="#" className="flex items-center group shrink-0 transition-all">
           <img 
-            src="https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png" 
+            src="https://wsrv.nl/?url=cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Biryani.png&w=400&output=webp&q=80" 
             alt="Baraka Kitchen Logo" 
             className="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0 relative z-10 group-hover:scale-105 transition-transform duration-500" 
           />

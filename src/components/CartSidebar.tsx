@@ -159,7 +159,7 @@ export default function CartSidebar() {
                     <span>{isSubmitting ? "Processing..." : "Place Order Now"}</span>
                   </button>
                   <p className="mt-3 text-center text-[10px] text-brand-500 font-medium tracking-wide">
-                    Order will be sent via WhatsApp & Email directly to the kitchen
+                    Order will be sent via WhatsApp directly to the kitchen
                   </p>
                 </div>
               )}

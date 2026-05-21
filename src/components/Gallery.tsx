@@ -1,26 +1,28 @@
 import { motion } from 'motion/react';
 
+const optimizeImage = (url: string) => {
+  if (url.startsWith('https://cdn.jsdelivr.net')) {
+    const cleanUrl = url.split('?')[0].replace('https://', '');
+    return `https://wsrv.nl/?url=${encodeURIComponent(cleanUrl)}&w=800&output=webp&q=80`;
+  }
+  return url;
+};
+
 const images = [
-  "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20with%202%20soft%20drink.png?q=80&w=2070&auto=format&fit=crop",
-"https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20with%202%20soft%20drink.png?q=80&w=2070&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=2070&auto=format&fit=crop", // Biryani close up
-
-"https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Chicken-Biryani-3.jpg?q=80&w=2070&auto=format&fit=crop",
-"https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Puri.png?q=80&w=2070&auto=format&fit=crop",
-"https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Beef%20Biryani.jpg?q=80&w=2070&auto=format&fit=crop",
-
-"https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Chicken-Biryani.jpg?q=80&w=2070&auto=format&fit=crop",
-"https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Kabab.png?q=80&w=2070&auto=format&fit=crop",
-"https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Zinger%20Roll.png?q=80&w=2070&auto=format&fit=crop",
-"https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Roll.png?q=80&w=2070&auto=format&fit=crop",
-"https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Frozen%20Aloo%20Samosa.png?q=80&w=2070&auto=format&fit=crop",
-"https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Plain%20Fries.png?q=80&w=2070&auto=format&fit=crop",
-
-
-  "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=2010&auto=format&fit=crop", // Cooking process
-  // "https://images.unsplash.com/photo-1606491956689-2ea866880c84?q=80&w=1921&auto=format&fit=crop", // Spices
-  "https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=1974&auto=format&fit=crop", // Biryani pot
-
+  optimizeImage("https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20with%202%20soft%20drink.png"),
+  optimizeImage("https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20with%202%20soft%20drink.png"),
+  "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800&auto=format&fit=crop", // Biryani close up
+  optimizeImage("https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Chicken-Biryani-3.jpg"),
+  optimizeImage("https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Puri.png"),
+  optimizeImage("https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Beef%20Biryani.jpg"),
+  optimizeImage("https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka-Chicken-Biryani.jpg"),
+  optimizeImage("https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Kabab.png"),
+  optimizeImage("https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Zinger%20Roll.png"),
+  optimizeImage("https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Roll.png"),
+  optimizeImage("https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Frozen%20Aloo%20Samosa.png"),
+  optimizeImage("https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Plain%20Fries.png"),
+  "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800&auto=format&fit=crop", // Cooking process
+  "https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop", // Biryani pot
 ];
 
 export default function Gallery() {

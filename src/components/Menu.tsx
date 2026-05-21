@@ -15,11 +15,14 @@ const menuCategories = [
     title: "Popular",
     description: "Most ordered right now.",
     items: [
+      { name: "Chicken Biryani", price: "from Rs. 420", desc: "Fragrant basmati rice cooked with seasoned chicken & spices", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/52fc202c-d763-491a-b420-c4e1754b05b4.jpg?width=150&height=150" },
+      { name: "Beef Haleem", price: "from Rs. 240", desc: "Slow-cooked haleem made with wheat, lentils, and tender meat, blended into a thick, rich texture. traditional spices and desi flavor", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/101823886/21387032-74e3-4f74-8d61-9a80312c4e9d.jpg?width=150&height=150" },
       { name: "Beef Biryani", price: "from Rs. 530", desc: "Aromatic basmati rice cooked with rich spices. Juicy beef full of flavor in every bite!", image: "https://images.deliveryhero.io/image/fd-pk/Products/98715225.jpg?width=150&height=150" },
       { name: "Ashrafi Zarda", price: "from Rs. 250", desc: "250g serving — traditional sweet zarda with sela rice, rich sweetness, and asharfia pearls.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/9aee0761-6b29-4085-9356-7a6008dd972e.jpg?width=150&height=150" },
       { name: "Chakki Atta Paratha", price: "Rs. 125", desc: "Freshly made paratha prepared with pure chakki atta, soft inside and crispy outside", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/c0f26ee6-93b5-4e3a-a177-a675a5def7e2.jpg?width=150&height=150" },
       { name: "Signature Deal 1", price: "from Rs. 895", desc: "500g. Beef biryani, 1 shami kabab with raita", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/101802948/a1f8d916-b9df-4907-b8ba-d28e073f017d.jpg?width=150&height=150" },
-      { name: "Chicken Roll", price: "Rs. 350", desc: "Crispy puri wrapped with juicy chicken salad and sauces", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/7dbfc815-ec99-4320-b2e8-a9f81d5753e8.jpg?width=150&height=150" }
+      { name: "Signature Chicken Roll", price: "Rs. 150", desc: "Big-sized crispy deep-fried spring roll filled with chicken, fresh vegetables, and flavorful spices.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/eebf1896-2d16-48ba-ae2c-4ff2b1915876.jpg?width=150&height=150" },
+      { name: "Crispy Bites", price: "Rs. 550", desc: "8 pieces served with fries", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/4be4c4fb-1406-43cf-84ac-9d1ef7d7402d.jpg?width=150&height=150" }
     ]
   },
   {
@@ -36,19 +39,21 @@ const menuCategories = [
     title: "Starters",
     description: "Perfect beginnings from our kitchen.",
     items: [
-      { name: "Beef Resha Shami Kabab", price: "Rs.120", desc: "Authentic sil batta beef shami kababs made with hand ground beef and traditional spices for a rick flavor.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Kabab.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Beef Resha Shami Kabab", price: "from Rs. 140", desc: "Authentic sil batta beef shami kababs made with hand ground beef and traditional spices for a rich flavor.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/101802950/0fb20da4-2101-44aa-91f4-981aa8ce318d.jpg?width=150&height=150" },
       { name: "Signature Chicken Roll", price: "Rs. 150", desc: "Big-sized crispy deep-fried spring roll filled with chicken, fresh vegetables, and flavorful spices.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/eebf1896-2d16-48ba-ae2c-4ff2b1915876.jpg?width=150&height=150" },
       { name: "Crispy Bites", price: "Rs. 550", desc: "8 pieces served with fries", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/4be4c4fb-1406-43cf-84ac-9d1ef7d7402d.jpg?width=150&height=150" }
     ]
   },
   {
-    title: "Baraka Kitchen",
+    title: "Baraka Biryani",
     description: "To complement your main course.",
     items: [
-      { name: "Beef Biryani 500-gm", price: "Rs.530", desc: "Aromatic basmati rice cooked with rich spices. Juicy beef full of flavor in every bite!", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-5.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Chicken Biryani 500-gm", price: "Rs.440", desc: "Fragrant basmati rice cooked with seasoned chicken and spices.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20-4.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Beef Biryani 1-kg", price: "Rs.1060", desc: "Aromatic basmati rice cooked with rich spices. Juicy beef full of flavor in every bite!", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-5.png?q=80&w=200&auto=format&fit=crop" },
-      { name: "Chicken Biryani 1-kg", price: "Rs.880", desc: "Fragrant basmati rice cooked with seasoned chicken and spices.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20-4.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Desi Ghee Chicken Biryani", price: "from Rs. 850", desc: "Made fresh on order with premium ingredients & hygienic cooking.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/101802955/967f679f-9b73-4cf7-988c-5163b94f49f4.jpg?width=150&height=150" },
+      { name: "Desi Ghee Beef Biryani", price: "from Rs. 950", desc: "Made fresh on order with premium ingredients & hygienic cooking", image: "https://images.deliveryhero.io/image/fd-pk/Products/98715228.jpg?width=150&height=150" },
+      { name: "Beef Biryani 500-gm", price: "Rs. 530", desc: "Aromatic basmati rice cooked with rich spices. Juicy beef full of flavor in every bite!", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-5.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Chicken Biryani 500-gm", price: "Rs. 440", desc: "Fragrant basmati rice cooked with seasoned chicken and spices.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20-4.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Beef Biryani 1-kg", price: "Rs. 1060", desc: "Aromatic basmati rice cooked with rich spices. Juicy beef full of flavor in every bite!", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Beef%20Biryani%20-5.png?q=80&w=200&auto=format&fit=crop" },
+      { name: "Chicken Biryani 1-kg", price: "Rs. 880", desc: "Fragrant basmati rice cooked with seasoned chicken and spices.", image: "https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Chicken%20Biryani%20-4.png?q=80&w=200&auto=format&fit=crop" }
     ]
   },
   {
@@ -154,6 +159,23 @@ const menuCategories = [
     ]
   },
   {
+    title: "Mix Dishes",
+    description: "Hearty and delicious traditional mix dishes.",
+    items: [
+      { name: "Beef Haleem", price: "from Rs. 240", desc: "Slow-cooked haleem made with wheat, lentils, and tender meat, blended into a thick, rich texture.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/101823886/21387032-74e3-4f74-8d61-9a80312c4e9d.jpg?width=150&height=150" },
+      { name: "Chicken Biryani", price: "from Rs. 420", desc: "Fragrant basmati rice cooked with seasoned chicken & spices", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/52fc202c-d763-491a-b420-c4e1754b05b4.jpg?width=150&height=150" },
+      { name: "Danedar Beef Korma", price: "from Rs. 430", desc: "Slow-cooked beef in a thick. Cooked in onion & yogurt based, mildly spiced and full of flavor.", image: "https://images.deliveryhero.io/image/fd-pk/Products/98732943.jpg?width=150&height=150" },
+      { name: "Egg Fried Rice", price: "Rs. 480", desc: "Rice cooked with saute Vegetables & Egg.", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/c7a885ff-3ec4-4908-bf96-242481308171.jpg?width=150&height=150" }
+    ]
+  },
+  {
+    title: "Rice",
+    description: "Finely cooked rice.",
+    items: [
+      { name: "Plain Rice", price: "Rs. 220", desc: "Single serving", image: "https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/jq2x/product/7911bef3-3e4f-4c73-970d-51dd6792766b.jpg?width=150&height=150" }
+    ]
+  },
+  {
     title: "Cutlery",
     description: "Utensils provided to help you enjoy your meal.",
     items: [
@@ -161,6 +183,14 @@ const menuCategories = [
     ]
   }
 ];
+
+const optimizeImage = (url: string) => {
+  if (url && url.startsWith('https://cdn.jsdelivr.net')) {
+    const cleanUrl = url.split('?')[0].replace('https://', '');
+    return `https://wsrv.nl/?url=${encodeURIComponent(cleanUrl)}&w=400&output=webp&q=80`;
+  }
+  return url;
+};
 
 export default function Menu() {
   const [selectedItem, setSelectedItem] = useState<any | null>(null);
@@ -236,7 +266,7 @@ export default function Menu() {
       doc.setFontSize(10);
       doc.setTextColor(100, 100, 100);
       doc.text("Nawab St, Model Colony Surti Housing Society, Karachi, 75080, Pakistan", 105, 74, { align: "center" });
-      doc.text("Phone: +92 332 8799437  |  Email: order@barakakitchen.com", 105, 79, { align: "center" });
+      doc.text("Phone: +92 332 8799437", 105, 79, { align: "center" });
 
       let startY = 93;
 
@@ -335,7 +365,7 @@ export default function Menu() {
                     <div className="group flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 bg-brand-100 rounded-xl relative border border-brand-200 hover:z-50 cursor-pointer shadow-sm">
                       {item.image ? (
                         <img 
-                          src={item.image} 
+                          src={optimizeImage(item.image)} 
                           alt={item.name} 
                           className="w-full h-full object-cover rounded-xl transition-all duration-300 origin-center group-hover:scale-[2.5] group-hover:shadow-2xl relative z-10 group-hover:z-50" 
                           referrerPolicy="no-referrer"
@@ -427,7 +457,7 @@ export default function Menu() {
             >
               {selectedItem.image ? (
                 <img 
-                  src={selectedItem.image} 
+                  src={optimizeImage(selectedItem.image)} 
                   alt={selectedItem.name} 
                   className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl" 
                   referrerPolicy="no-referrer"

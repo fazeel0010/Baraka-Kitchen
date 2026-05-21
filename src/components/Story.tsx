@@ -16,7 +16,7 @@ export default function Story() {
           >
             <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl">
               <img 
-                src="https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Biryani%20Cover.png" 
+                src="https://wsrv.nl/?url=cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/Baraka%20Biryani%20Cover.png&w=800&output=webp&q=80" 
                 alt="Spices and ingredients" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -59,9 +59,9 @@ export default function Story() {
 
             <div className="mt-8 pt-6 border-t border-brand-900/10">
               <img 
-                src="https://cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/areej%20signature.png" 
+                src="https://wsrv.nl/?url=cdn.jsdelivr.net/gh/fazeel0010/Baraka-Biryani-Restaurant-@main/Web-Assets/areej%20signature.png&w=600&output=webp&q=80" 
                 alt="Chef Signature" 
-                className="h-40 sm:h-44 object-contain -ml-4 -mt-8 -mb-6 sm:-mb-8 opacity-40 filter invert-[0.2]"
+                className="h-64 sm:h-72 object-contain -ml-6 -mt-12 -mb-10 sm:-mb-12 opacity-40 filter invert-[0.2]"
                 referrerPolicy="no-referrer"
                 loading="lazy"
                 decoding="async"
